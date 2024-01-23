@@ -41,6 +41,34 @@ describe('Badge Component', () => {
             cy.get('[data-testid="successIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
         })
+
+        it('Validate CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="successIconBadge"]').should("be.visible");
+            cy.get('[data-testid="successIconTextBadge"]').should("be.visible");
+            
+            cy.get('[data-testid="successIconTextBadge"]').shadow().find("div.goa-badge.badge-success").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#006f4c")
+              );
+              cy.get('[data-testid="successIconTextBadge"]').shadow().find("div.goa-badge.badge-success").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="successIconBadge"]').shadow().find("div.goa-badge.badge-success.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#006f4c")
+              );
+              cy.get('[data-testid="successIconBadge"]').shadow().find("div.goa-badge.badge-success.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+
+        })
     })
 
     context('Important Badge', () => {
@@ -81,6 +109,36 @@ describe('Badge Component', () => {
             //Verify Icon exist
             cy.get('[data-testid="importantIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
+        })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="importantIconBadge"]').should("be.visible");
+            cy.get('[data-testid="importantIconTextBadge"]').should("be.visible");
+            
+            cy.get('[data-testid="importantIconTextBadge"]').shadow().find("div.goa-badge.badge-important").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#f9ce2d") //#f9ce2d
+              );
+              cy.get('[data-testid="importantIconTextBadge"]').shadow().find("div.goa-badge.badge-important").should(
+                "have.css",
+                "color",
+                hexToRgb("#333333")
+              );
+
+              cy.get('[data-testid="importantIconBadge"]').shadow().find("div.goa-badge.badge-important.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#f9ce2d")
+              );
+
+              cy.get('[data-testid="importantIconBadge"]').shadow().find("div.goa-badge.badge-important.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#333333")
+              );
+
         })
     })
 
@@ -123,6 +181,35 @@ describe('Badge Component', () => {
             cy.get('[data-testid="InformationIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
         })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="InformationIconBadge"]').should("be.visible");
+            cy.get('[data-testid="InformationIconTextBadge"]').should("be.visible");
+            
+
+            cy.get('[data-testid="InformationIconTextBadge"]').shadow().find("div.goa-badge.badge-information").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#f1f1f1")
+              );
+              cy.get('[data-testid="InformationIconTextBadge"]').shadow().find("div.goa-badge.badge-information").should(
+                "have.css",
+                "color",
+                hexToRgb("#004a8f")
+              );
+              cy.get('[data-testid="InformationIconBadge"]').shadow().find("div.goa-badge.badge-information.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#f1f1f1")
+              );
+              cy.get('[data-testid="InformationIconBadge"]').shadow().find("div.goa-badge.badge-information.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#004a8f")
+              );
+            
+        })
     })
 
     context('Emergency Badge', () => {
@@ -163,6 +250,33 @@ describe('Badge Component', () => {
             //Verify Icon exist
             cy.get('[data-testid="emergencyIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
+        })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="emergencyIconBadge"]').should("be.visible");
+            cy.get('[data-testid="emergencyIconTextBadge"]').should("be.visible");
+            
+            cy.get('[data-testid="emergencyIconTextBadge"]').shadow().find("div.goa-badge.badge-emergency").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#da291c")
+              );
+              cy.get('[data-testid="emergencyIconTextBadge"]').shadow().find("div.goa-badge.badge-emergency").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="emergencyIconBadge"]').shadow().find("div.goa-badge.badge-emergency.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#da291c")
+              );
+              cy.get('[data-testid="emergencyIconBadge"]').shadow().find("div.goa-badge.badge-emergency.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
         })
     })
 
@@ -205,6 +319,34 @@ describe('Badge Component', () => {
             cy.get('[data-testid="darkIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
         })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="darkIconBadge"]').should("be.visible");
+            cy.get('[data-testid="darkIconTextBadge"]').should("be.visible");
+            
+            cy.get('[data-testid="darkIconTextBadge"]').shadow().find("div.goa-badge.badge-dark").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#333333")
+              );
+              cy.get('[data-testid="darkIconTextBadge"]').shadow().find("div.goa-badge.badge-dark").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="darkIconBadge"]').shadow().find("div.goa-badge.badge-dark.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#333333")
+              );
+              cy.get('[data-testid="darkIconBadge"]').shadow().find("div.goa-badge.badge-dark.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+
+        })
     })
 
     context('Midtone Badge', () => {
@@ -245,6 +387,34 @@ describe('Badge Component', () => {
             //Verify Icon exist
             cy.get('[data-testid="midtoneIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
+        })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="midtoneIconBadge"]').should("be.visible");
+            cy.get('[data-testid="midtoneIconTextBadge"]').should("be.visible");
+            
+            cy.get('[data-testid="midtoneIconTextBadge"]').shadow().find("div.goa-badge.badge-midtone").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#666666")
+              );
+              cy.get('[data-testid="midtoneIconTextBadge"]').shadow().find("div.goa-badge.badge-midtone").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="midtoneIconBadge"]').shadow().find("div.goa-badge.badge-midtone.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#666666")
+              );
+              cy.get('[data-testid="midtoneIconBadge"]').shadow().find("div.goa-badge.badge-midtone.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#ffffff")
+              );
+
         })
     })
     
@@ -287,6 +457,46 @@ describe('Badge Component', () => {
             cy.get('[data-testid="lightIconBadge"]').shadow().find('div').find('goa-icon').should('exist');
     
         })
+
+        it('Validate Badge CSS Property', () => {
+            cy.visit("http://localhost:4200/badge");
+            cy.get('[data-testid="lightIconBadge"]').should("be.visible");
+            cy.get('[data-testid="lightIconTextBadge"]').should("be.visible");
+    
+            cy.get('[data-testid="lightIconTextBadge"]').shadow().find("div.goa-badge.badge-light").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="lightIconTextBadge"]').shadow().find("div.goa-badge.badge-light").should(
+                "have.css",
+                "color",
+                hexToRgb("#333333")
+              );
+              cy.get('[data-testid="lightIconBadge"]').shadow().find("div.goa-badge.badge-light.icon-only").should(
+                "have.css",
+                "background-color",
+                hexToRgb("#ffffff")
+              );
+              cy.get('[data-testid="lightIconBadge"]').shadow().find("div.goa-badge.badge-light.icon-only").should(
+                "have.css",
+                "color",
+                hexToRgb("#333333")
+              );
+        })
     })
+
+    function hexToRgb(hex: any) {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result
+          ? "rgb(" +
+              parseInt(result[1], 16) +
+              ", " +
+              parseInt(result[2], 16) +
+              ", " +
+              parseInt(result[3], 16) +
+              ")"
+          : null;
+      }
 
 })
